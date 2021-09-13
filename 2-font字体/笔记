@@ -1,0 +1,52 @@
+CSS字体属性: CSS Fonts用于定义字体系列,大小,粗细和文字样式.
+
+一. 字体系列: font-family
+选择器 {
+    font-family: "微软雅黑";
+}
+div {
+    font-family: Arial, "Microsoft Yahei", "微软雅黑";
+}
+1. 个字体之间必须用英文状态下的逗号隔开.
+2. 如果有空格隔开的单词组成的字体,加引号.(如果排序在前的字体系统没有,则向后选择,如果都没有,则用浏览器默认的)
+3. 提倡使用系统默认字体.
+4. 用body标签选择器.
+
+二. CSS字体大小: font-size(定义字体大小)
+p{
+    font-size: 20px;
+}
+1. px(像素)是网页常用单位.
+2. 不同浏览器默认字号大小不一样. 尽量明确字体大小,不要默认大小.
+3. 谷歌浏览器默认16px.
+4. 可以给body指定整个页面文字大小.
+5. 标题标签特殊,需要单独指定文字大小.
+
+三. 字体粗细:font-weight
+属性值: normal: 默认值(不加粗); bold: 定义粗体(加粗的); 100-900: 400等同于normal,700等同于bold. 注意不加单位
+选择器 {
+    /*变细*/
+    font-weight:400;
+    font-weight: normal;
+    /*变粗*/
+    font-weight:700;
+    font-weight: bold;
+}
+
+四. 文字样式: font-style
+p {
+    // 斜体
+    font-style: italic;
+    // 默认
+    font-style: normal;
+}
+
+五. 复合属性: font
+body {
+    /* 复合属性: 严格按照下列的顺序来写*/
+    font: font-style font-weight font-size/line-height font-family;
+    font: italic 700 16px 'Microsoft Yahei';
+}
+
+1.使用font属性时,必须按上面的语法格式中的顺序书写,不能更换顺序,并且各个属性间可以以空格隔开.
+2.不需要设置的属性可以省略(取默认值),但必须保留font-size和font-family属性,否则font属性将不起作用.

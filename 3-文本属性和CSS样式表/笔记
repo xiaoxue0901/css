@@ -1,0 +1,61 @@
+CSS文本属性
+CSSText属性可定义文本的外观,比如文本的颜色,对齐文本,装饰文本,文本缩进,行间距等.
+
+一. 文本颜色: 
+color属性用于定义文本的颜色.
+div {
+    color: red;
+}
+3种表示方式:
+1. 预定义颜色值: red,green,blue
+2. 十六进制: #FF0000, #FF6600. (开发中最常用)
+3. RGB代码: rgb(255,255,0)或rgb(100%,0%,0%)
+
+二. 对齐文本
+text-align: 设置元素内文本内容的水平对齐方式.
+div {
+    text-align: center;
+}
+属性值: left, right, center.
+
+三. 文本缩进
+text-indent: 指定文本第一行的缩进.通常是将段落首行缩进. 可以是负值.
+p {
+    text-indent: 20px;
+    text-indent: 2em;
+}
+em是一个相对单位,就是当前元素(font-size)一个文字的大小,如果当前元素没有设置大小,则会按照父元素的一个文字大小.
+
+四. 行间距
+line-height: 设置行间的距离,可以控制文字与行之间的距离. 
+行间距组成: 上间距, 文本高度, 下间距.
+div {
+    line-height: 26px;
+}
+
+五. 文本修饰
+text-decoration: 给文字加线. 
+div {
+    /*取消下划线*/
+    text-decoration: none;
+    /*添加下划线*/
+    text-decoration: underline;
+    /*上划线*/
+    text-decoration: overline;
+    /*删除样式*/
+    text-decoration: line-through;
+}
+
+
+CSS的引入样式
+一. CSS引入方式
+    1. 行内样式表(行内式): 在元素标签内部的style属性中设置CSS样式. 适用于修改简单样式.
+    <div style="color:read;font-size:12px>退下,让朕来</div>
+    2. 内部样式表(嵌入式): 写入到html页面内部. 示例:内部样式表.html 
+    3. 外部样式表(链接式): 样式单独写到css文件中,之后把css文件引入到HTML页面中使用.
+        1. 新建后缀名为.css的样式文件, 把所有css代码放入此文件中. style.css
+        2.在HTML页面中,使用<link>标签引入这个文件
+        <link rel="stylesheet", href="css文件路径">
+        link标签说明: 
+        1. rel: 定义当前文档与被链接的文档之间的关系, 这里指定为"stylesheet",表示被链接的文件是一个样式表文件.
+        2. href: 定义所链接的外部样式表文件的URL,可以是相对路径,也可以是绝对路径.
